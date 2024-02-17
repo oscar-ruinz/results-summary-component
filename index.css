@@ -1,0 +1,189 @@
+:root{
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    --Light-red-bg: hsla(0, 100%, 67%, 0.15);
+    --Orangey-yellow-bg: hsla(39, 100%, 56%, 0.15);
+    --Green-teal-bg: hsla(166, 100%, 37%, 0.15);
+    --Cobalt-blue-bg: hsla(234, 85%, 45%, 0.15);
+    --Light-slate-blue-bg-gradient: hsl(252, 100%, 67%);
+    --Light-royal-blue-bg-gradient: hsl(241, 81%, 54%);
+    --Violet-blue-circle-gradient: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle-gradient: hsla(241, 72%, 46%, 0);
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-family: "Hanken Grotesk", sans-serif;
+    overflow: hidden;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+.result{
+    border: 1px solid rgba(0, 0, 0, 0);
+    height: 38%;
+    border-radius: 0px 0px 30px 30px;
+    background: linear-gradient(var(--Light-slate-blue-bg-gradient) -30%,var(--Light-royal-blue-bg-gradient) 90%);
+    text-align: center;
+}
+.result p.title{
+    margin: 20px auto;
+    color: var(--Light-lavender);
+}
+.average{
+    border-radius: 50%;
+    margin: auto;
+    width: 130px;
+    height: 130px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(var(--Violet-blue-circle-gradient),var(--Persian-blue-circle-gradient));
+}
+.average h1{
+    font-size: 4rem;
+    color: var(--White);
+    padding-top: 10px;
+}
+.average p{
+    color: #7668FF;
+}
+.result h2{
+    color: var(--White);
+    margin: 10px 0;
+}
+.result p.message{
+    color: var(--Light-lavender);
+    font-size: 1rem;
+    width: 80%;
+    margin: 0 auto;
+}
+.summary{
+    height: 60%;
+    text-align: center;
+}
+.summary h3{
+    color: var(--Dark-gray-blue);
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+.card{
+    height: 70px;
+    width: 90%;
+    border-radius: 10px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card p.topic{
+    margin-left: 20px;
+    display: flex;
+}
+.card p img{
+    padding-right: 10px;
+}
+.card p.score{
+    padding-right: 10px;
+    color: var(--Dark-gray-blue);
+    font-weight: 500;
+}
+.card p.score span{
+    font-weight: 800;
+}
+.card-1{
+    background-color: var(--Light-red-bg);
+    color: var(--Light-red);
+}
+.card-2{
+    background-color: var(--Orangey-yellow-bg);
+    color: var(--Orangey-yellow);
+}
+.card-3{
+    background-color: var(--Green-teal-bg);
+    color: var(--Green-teal);
+}
+.card-4{
+    background-color: var(--Cobalt-blue-bg);
+    color: var(--Cobalt-blue);
+}
+.summary button{
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+    height: 70px;
+    width: 90%;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.2rem;
+}
+.summary button:hover{
+    background: linear-gradient(var(--Light-slate-blue-bg-gradient) -30%,var(--Light-royal-blue-bg-gradient) 90%);
+    cursor: pointer;
+}
+
+@media (min-width:1000px){
+    .container{
+        width: 800px;
+        height: 60vh;
+        border-radius: 20px;
+        box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2);
+    }
+    .result{
+        height: 100%;
+        width: 50%;
+        float: left;
+        border-radius: 20px;
+    }
+    .result p.title{
+        font-size: 1.3rem;
+        margin-top: 30px;
+    }
+    .average{
+        width: 200px;
+        height: 200px;
+        margin: 30px auto;
+    }
+    .summary{
+        height: 100%;
+        width: 49%;
+        float: right;
+        border-radius: 20px;
+    }
+    .average h1{
+        padding-top: 40px;
+    }
+    .result h2{
+        margin: 40px 0;
+        font-size: 2rem;
+    }
+    .result p.message{
+        font-size: 1.1rem;
+        width: 60%;
+    }
+    .card{
+        height: 60px;
+        margin: 20px auto;
+    }
+    .summary button{
+        height: 60px;
+        margin-top: 25px;
+    }
+}
